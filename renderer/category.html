@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <h1 class="welcome">Bloommerie 🪷</h1>
+
+        <div class="header-buttons">
+            <button onclick="wishlist ()">🩷</button>
+            <button onclick="cart ()">🛒</button>
+            <button class="back-button" onclick="home ()">⬅️</button>
+        </div>
+    </header>
+
+    <section class="filter-bar">     
+        <select id="sortOption" onchange="updateProducts ()">
+            <option value="">Sort By</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+
+        <label>Budget:</label>
+        <select id="priceFilter" onchange="updateProducts ()">
+            <option value="">All</option>
+            <option value="low">Under $10</option>
+            <option value="mid">$10 - $30</option>
+            <option value="high">Above $30</option>
+        </select>
+
+        <label>Brand:</label>
+        <select id="brandFilter" onchange="updateProducts ()"></select>
+    </section>
+
+    <h1 id="categoryTitle"></h1>
+
+    <div id="productList"></div>
+
+    <!-- footer section -->
+      <footer>
+        <h4>Copyright @ Bloommerie 2026</h4>
+      </footer>
+
+    <script src="category.js"></script>
+</body>
+</html>
